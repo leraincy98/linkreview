@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback Visite</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset et styles de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    /* Styles du conteneur */
+    .container {
+      width: 100%;
+      max-width: 500px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* Styles des boutons */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 0.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-green {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .btn-green:hover {
+      background-color: #218838;
+    }
+
+    .btn-red {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    .btn-red:hover {
+      background-color: #c82333;
+    }
+
+    /* Style pour masquer un élément */
+    .hidden {
+      display: none;
+    }
+
+    /* Styles supplémentaires pour l'image */
+    #message-section img {
+      margin-top: 1rem;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Comment avez-vous trouvé votre visite ?</h2>
+    <div id="initial-options">
+      <button id="satisfied" class="btn btn-green">Je suis satisfait</button>
+      <button id="not-satisfied" class="btn btn-red">Je ne suis pas satisfait</button>
+    </div>
+    <!-- Section de message personnalisé pour l'insatisfaction -->
+    <div id="message-section" class="hidden">
+      <h2>Message du Cabinet Dentaire Mati</h2>
+      <p>
+        Nous sommes sincèrement désolés d'apprendre que votre visite n'a pas répondu à vos attentes.
+        Votre satisfaction est notre priorité et nous mettons tout en œuvre pour améliorer nos services.
+        N'hésitez pas à nous contacter pour toute question ou pour prendre rendez-vous.
+      </p>
+      <!-- Image illustrative récupérée dynamiquement via Unsplash -->
+      <img src="https://source.unsplash.com/featured/?dental,office" alt="Cabinet Dentaire Mati">
+    </div>
+  </div>
+
+  <script>
+    // Redirection vers la page Google pour un avis positif
+    document.getElementById('satisfied').addEventListener('click', function() {
+      window.location.href = 'https://g.page/r/CWOfBHjeaSb2EAE/review';
+    });
+    // Affichage du message personnalisé en cas d'insatisfaction
+    document.getElementById('not-satisfied').addEventListener('click', function() {
+      document.getElementById('initial-options').classList.add('hidden');
+      document.getElementById('message-section').classList.remove('hidden');
+    });
+  </script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

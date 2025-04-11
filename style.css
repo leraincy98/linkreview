@@ -1,0 +1,135 @@
+/* ======================== */
+/*       RESET CSS          */
+/* ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======================== */
+/*     VARIABLES CSS        */
+/* ======================== */
+:root {
+  --font-family: "Poppins", sans-serif;
+  --primary-color: #28a745; /* Vert principal */
+  --primary-color-hover: #218838; /* Hover du vert */
+  --secondary-color: #dc3545; /* Rouge secondaire */
+  --secondary-color-hover: #c82333; /* Hover du rouge */
+  --text-color: #333333; /* Couleur du texte */
+  --background-color: #f8f9fa; /* Fond de la page */
+  --container-bg: #ffffff; /* Fond de la carte */
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+}
+
+/* ======================== */
+/*       GLOBAL STYLES      */
+/* ======================== */
+body {
+  background: linear-gradient(135deg, var(--background-color), #e9ecef);
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ======================== */
+/*      CONTAINER CARD      */
+/* ======================== */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--container-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ======================== */
+/*        TYPOGRAPHIE       */
+/* ======================== */
+h2 {
+  color: var(--text-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* ======================== */
+/*       BOUTONS UX/UI      */
+/* ======================== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed), box-shadow var(--transition-speed);
+  margin: 0.5rem;
+}
+
+/* Bouton pour "Je suis satisfait" */
+.btn-green {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.btn-green:hover {
+  background-color: var(--primary-color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Bouton pour "Je ne suis pas satisfait" */
+.btn-red {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.btn-red:hover {
+  background-color: var(--secondary-color-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================== */
+/*      TEXTAREA FEEDBACK   */
+/* ======================== */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #dddddd;
+  border-radius: var(--border-radius);
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+/* ======================== */
+/*       CLASSE HIDDEN      */
+/* ======================== */
+.hidden {
+  display: none;
+}
+
+/* ======================== */
+/*    RESPONSIVITÉ MOBILE   */
+/* ======================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.65rem 1.2rem;
+  }
+}
